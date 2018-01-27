@@ -2,7 +2,6 @@ package com.tkb.algorithm;
 
 import com.tkb.algorithm.binary_tree.BinaryTree;
 import com.tkb.algorithm.binary_tree.Node;
-import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 
 public class Main {
 
@@ -15,17 +14,18 @@ public class Main {
         for (int value : values){
             root = BinaryTree.addNode(root,value);
         }
-        System.out.print("Height of the node: "+BinaryTree.getHeightOfTree(root)+"\n");
+        System.out.print("Height of the node: "+BinaryTree.getHeightOfTree(root));
 
+        System.out.print("\nLabel Order Traversal: ");
         BinaryTree.labelOrderTraversal(root);
-        System.out.print("\n");
 
+        System.out.print("\nIn Order Traversal: ");
         BinaryTree.inOrderTraversal(root);
-        System.out.print("\n");
 
+        System.out.print("\nPre Order Traversal: ");
         BinaryTree.preOrderTraversal(root);
-        System.out.print("\n");
 
+        System.out.print("\nPost Order Traversal: ");
         BinaryTree.postOrderTraversal(root);
     }
 }
