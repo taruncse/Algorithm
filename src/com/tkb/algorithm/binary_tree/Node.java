@@ -9,6 +9,7 @@ public class Node {
     Node(int key, String value){
         this.key = key;
         this.value = value;
+        this.leftChild = this.rightChild = null;
     }
 
     public String toString(){
