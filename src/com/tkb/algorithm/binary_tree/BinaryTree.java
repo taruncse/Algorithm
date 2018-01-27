@@ -52,4 +52,27 @@ public class BinaryTree {
         }
     }
 
+    public static void inOrderTraversal (Node root){
+        if (root!=null){
+            inOrderTraversal(root.leftChild);
+            System.out.print(root.value+" ");
+            inOrderTraversal(root.rightChild);
+        }
+    }
+    public static void preOrderTraversal (Node root){
+        if (root!=null){
+            System.out.print(root.value+" ");
+            preOrderTraversal(root.leftChild);
+            preOrderTraversal(root.rightChild);
+        }
+    }
+
+    public static void postOrderTraversal (Node root){
+        if (root!=null){
+            postOrderTraversal(root.leftChild);
+            postOrderTraversal(root.rightChild);
+            System.out.print(root.value+" ");
+
+        }
+    }
 }
