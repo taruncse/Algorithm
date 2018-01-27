@@ -13,7 +13,8 @@ public class Main {
         for (int value : values){
             root = BinaryTree.addNode(root,value);
         }
-        System.out.print(BinaryTree.getHeightOfTree(root)+"");
+        System.out.print(BinaryTree.getHeightOfTree(root)+"\n");
 
+        BinaryTree.labelOrderTraversal(root);
     }
 }

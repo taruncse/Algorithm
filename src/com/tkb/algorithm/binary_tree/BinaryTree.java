@@ -1,5 +1,8 @@
 package com.tkb.algorithm.binary_tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinaryTree {
 
     public static Node addNode(Node root, int value){
@@ -29,6 +32,23 @@ public class BinaryTree {
             return leftHeight+1;
         }else {
             return righHeight+1;
+        }
+    }
+
+    public static void labelOrderTraversal(Node root){
+        Queue<Node> queue = new LinkedList<>();
+        if (root != null) {
+            queue.add(root);
+        }
+        while ( ! queue.isEmpty()) {
+            Node n = queue.remove();
+            System.out.print(n.value + " ");
+            if (n.leftChild != null) {
+                queue.add(n.leftChild);
+            }
+            if (n.rightChild != null) {
+                queue.add(n.rightChild);
+            }
         }
     }
 
