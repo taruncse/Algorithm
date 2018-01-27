@@ -1,18 +1,16 @@
 package com.tkb.algorithm.binary_tree;
 
 public class Node {
-    int key;
-    String value;
+    int value;
     Node leftChild;
     Node rightChild;
 
-    Node(int key, String value){
-        this.key = key;
+    Node(int  value){
         this.value = value;
         this.leftChild = this.rightChild = null;
     }
 
     public String toString(){
-        return "Key: "+key+" Value: "+value;
+        return "Value: "+value;
     }
 }
