@@ -2,4 +2,4 @@
 It's a Java application to implement major Algorithms.
 
 ## Tree:
-*Tree represents the nodes connected by edges.
+* Tree represents the nodes connected by edges.
