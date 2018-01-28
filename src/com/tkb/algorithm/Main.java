@@ -1,13 +1,25 @@
 package com.tkb.algorithm;
 
-import com.tkb.algorithm.binary_tree.BinaryTree;
-import com.tkb.algorithm.binary_tree.Node;
 
+import com.tkb.algorithm.link_list.LinkList;
+import com.tkb.algorithm.link_list.Node;
 public class Main {
 
     public static void main(String[] args) {
 
-        int [] values = {3,5,2,1,4,6,7};
+        int [] values = {1,2,3,3,4,5,5,6};
+        Node head = null;
+        for(int value : values){
+            head = LinkList.insertNode(head,value);
+        }
+        LinkList.removeDuplicate(head);
+        LinkList.displayNodes(head);
+
+
+
+
+        //Following code is for BinaryTree
+        /*int [] values = {3,5,2,1,4,6,7};
         Node root = null ;
 
         // Add node
@@ -26,6 +38,6 @@ public class Main {
         BinaryTree.preOrderTraversal(root);
 
         System.out.print("\nPost Order Traversal: ");
-        BinaryTree.postOrderTraversal(root);
+        BinaryTree.postOrderTraversal(root);*/
     }
 }
