@@ -10,6 +10,8 @@ Assume that the array A = [2,1,5,9] needs to be sorted in ascending order.
 
 The minimum element in the array i.e. 1 is searched for and then swapped with the element that is currently located at the first position, i.e. 2 . Now the minimum element in the remaining unsorted array is searched for and put in the second position, and so on.
 
+[Read more](https://www.hackerearth.com/practice/algorithms/sorting/selection-sort/tutorial/)
+
 ```java
 
 public class Main {
