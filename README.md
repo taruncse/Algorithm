@@ -51,7 +51,56 @@ public class Main {
 }
 
 ```
+### Minimum swap count to sort an Array
 
+Given an array of n distinct elements, find the minimum number of swaps required to sort the array.
+
+
+```
+
+import java.util.HashMap;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int[] unSortedArray = {1,3,5,2,4};
+        System.out.println(getMinSwapCount(unSortedArray));
+    }
+
+    private static int getMinSwapCount(int[] arr){
+
+        int swapCount = 0;
+        HashMap<Integer,Integer> cacheValue = new HashMap<>();
+        int arrayLength = arr.length;
+        boolean [] isVisited = new boolean[arrayLength+1];
+
+        for (int i=1; i<=arrayLength; i++){
+            cacheValue.put(i,arr[i-1]);
+        }
+        for (int j=1; j<=arrayLength; j++){
+            int nextNode ;
+            if (isVisited[j] == false){
+
+                isVisited[j] = true;
+                if (cacheValue.get(j) == j){
+                    continue;
+                }else {
+                    int temp = cacheValue.get(j);
+                    while (isVisited[temp] == false){
+                        isVisited[temp] = true;
+                        nextNode = cacheValue.get(temp);
+                        temp = nextNode;
+                        swapCount++;
+                    }
+                }
+            }
+        }
+
+        return swapCount;
+    }
+}
+
+```
 ### Tree:
  Tree represents the nodes connected by edges.
  #### Binary Tree:
