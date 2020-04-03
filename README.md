@@ -56,7 +56,7 @@ public class Main {
 Given an array of n distinct elements, find the minimum number of swaps required to sort the array.
 
 
-```
+```Java
 
 import java.util.HashMap;
 
