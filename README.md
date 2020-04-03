@@ -111,3 +111,8 @@ public class Main {
 
    * The left sub-tree of a node has a key less than or equal to its parent node's key.
    * The right sub-tree of a node has a key greater than to its parent node's key.
+   
+   
+### HackerRank: Sock Merchant(https://www.hackerrank.com/challenges/sock-merchant/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup)
+
+
